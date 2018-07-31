@@ -10,7 +10,6 @@ module.exports = merge(common, {
       contentBase: path.join(__dirname, '/.././dist'),
       hot: true,
       compress: true,
-      open: true,
       historyApiFallback: true
    },
    plugins: [

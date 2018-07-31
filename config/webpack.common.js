@@ -15,6 +15,10 @@ module.exports = {
                plugins: ['transform-object-rest-spread']
             }
          }]
+      },
+      {
+         test: /.css?$/,
+         loader: 'style-loader!css-loader'
       }] 
    },
    resolve: {
