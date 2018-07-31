@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Component from './component'
+import App from './Components/App'
+ 
 
-
-ReactDOM.render(<Component val="1128394789" />, document.querySelector('.app'))
+ReactDOM.render(<App />, document.querySelector('.app'))
 
