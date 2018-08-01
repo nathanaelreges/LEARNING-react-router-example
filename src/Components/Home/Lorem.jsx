@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Lorem = props => { 
-   console.log('LOREM')
    return <div className="card-body">
       <h3 className="card-title">What is Lorem Ipsum?</h3>
       <p className="card-text">

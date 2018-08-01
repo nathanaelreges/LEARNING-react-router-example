@@ -7,23 +7,8 @@ import Ipsum from './Ipsum'
 
 class Home extends React.Component {
    render () {
-      const renderTabs = () => {
-         const tab = this.props.match.params.tab
-         if(tab == 'lorem') {
-            return <Lorem />
-         }
-         else
-         if(tab == 'ipsum') {
-            return <Ipsum />
-         }
-         else
-         if(tab == 'dolor') {
-            return <Dolor />
-         }
-      }
-
-      return <div className="container mt-5 mb-5">
-         <div className="jumbotron">
+      return <div className="container mb-3">
+         <div className="jumbotron mt-4">
             <h1 className="display-3">Home</h1>
          </div>
 
@@ -41,7 +26,12 @@ class Home extends React.Component {
                   </li>
                </ul>
             </div>
-            {renderTabs()}
+            <Switch>
+               <Route path='/home/lorem' component={Lorem} />
+               <Route path='/home/ipsum' component={Ipsum} />
+               <Route path='/home/dolor' component={Dolor} />
+               <Redirect from='/home' to='/home/lorem'/>
+            </Switch>
          </div>
       </div>
    }
