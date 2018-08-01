@@ -12,7 +12,10 @@ const Menu = props => {
       <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
          <ul className="navbar-nav mr-auto mt-2 mt-md-0">
             <li className="nav-item">
-               <NavLink to='/home' className="nav-link" isActive={homeActiveCheck} activeClassName="active">Home</NavLink>
+               <NavLink to='/home' className="nav-link" 
+                  isActive={homeActiveCheck} activeClassName="active">
+                  Home
+               </NavLink>
             </li>
             <li className="nav-item">
                <NavLink to='/about' className="nav-link" activeClassName="active">About</NavLink>

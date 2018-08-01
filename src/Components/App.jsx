@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import Home from './Home'
 import About from './About'
 import Menu from './Menu'
@@ -12,9 +12,10 @@ class App extends React.Component {
          <div>
             <Menu />
             <Switch>
-               <Route path="/home" component={Home} />
+               <Redirect exact from='/home' to='/home/lorem'/>
+               <Route path="/home/:tab" component={Home} />
                <Route path="/about" component={About} />
-               <Route component={Home} />
+               <Route path ="/" component={Home} />
             </Switch>
          </div>
          
